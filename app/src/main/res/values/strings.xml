@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Jetpack Compose Course</string>
+    <string name="fruit">Mango</string>
+</resources>
