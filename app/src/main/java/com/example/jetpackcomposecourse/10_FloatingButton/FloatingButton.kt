@@ -1,5 +1,7 @@
 package com.example.jetpackcomposecourse.`10_FloatingButton`
 
+
+
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -13,22 +15,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-
 
 @Composable
-fun FloatingButtonExapmle() {
+fun FloatingButtonExample() {
 
     Scaffold(
-
         floatingActionButton = {
-            FloatingActionButton(     // we can show only symbol
-                onClick = {/*TODO*/ }
-            ) {
+            FloatingActionButton(onClick = { /* Action */ }) {
                 Icon(
-                    Icons.Default.Add,
+                    imageVector = Icons.Default.Add,
                     contentDescription = "Add"
                 )
             }
@@ -40,24 +36,20 @@ fun FloatingButtonExapmle() {
                 .padding(padding),
             contentAlignment = Alignment.Center
         ) {
-            Text("Floating Button Example")
+            Text("Normal Floating Action Button")
         }
     }
-
 }
 
 @Composable
 fun ExtendedFABExample() {
+
     Scaffold(
         floatingActionButton = {
-            ExtendedFloatingActionButton(   // we can show both icon and text
-                onClick = { },
-                containerColor = Color.DarkGray,
-                contentColor = Color.White,
+            ExtendedFloatingActionButton(
+                onClick = { /* Action */ },
                 icon = { Icon(Icons.Default.Add, contentDescription = "Add") },
-                text = {
-                    Text("ADD Item")
-                }
+                text = { Text("Add Item") }
             )
         }
     ) { padding ->
@@ -67,15 +59,13 @@ fun ExtendedFABExample() {
                 .padding(padding),
             contentAlignment = Alignment.Center
         ) {
-            Text("Floating Button Example")
+            Text("Extended Floating Action Button")
         }
-
     }
 }
 
-
 @Preview(showSystemUi = true)
 @Composable
-fun showButtonUI() {
+fun ShowPreview() {
     ExtendedFABExample()
 }
