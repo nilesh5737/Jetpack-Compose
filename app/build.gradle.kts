@@ -60,5 +60,11 @@ dependencies {
     implementation ("androidx.constraintlayout:constraintlayout-compose:1.1.1")
     implementation("androidx.compose.material3:material3:1.2.1")
     implementation("androidx.compose.material:material-icons-extended:1.6.1")
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.8.0-beta06")
+
+// Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+
 
 }
